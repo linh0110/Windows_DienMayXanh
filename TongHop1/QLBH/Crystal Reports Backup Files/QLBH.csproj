@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E544B162-D079-4833-B085-C593ABFECC41}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QLBH</RootNamespace>
+    <AssemblyName>QLBH</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.1.UI, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v17.1.Wizard, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dangnhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dangnhap.Designer.cs">
+      <DependentUpon>dangnhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="doanhsocanhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="doanhsocanhan.Designer.cs">
+      <DependentUpon>doanhsocanhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doanhthutong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doanhthutong.Designer.cs">
+      <DependentUpon>Doanhthutong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="banhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="banhang.Designer.cs">
+      <DependentUpon>banhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hoadon.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Hoadon.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="khachhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="khachhang.Designer.cs">
+      <DependentUpon>khachhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kho.Designer.cs">
+      <DependentUpon>kho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="khuyenmai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="khuyenmai.designer.cs">
+      <DependentUpon>khuyenmai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="nhapsoluong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nhapsoluong.Designer.cs">
+      <DependentUpon>nhapsoluong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="quanly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="quanly.Designer.cs">
+      <DependentUpon>quanly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="dienmayxanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dienmayxanh.Designer.cs">
+      <DependentUpon>dienmayxanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="showhd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="showhd.Designer.cs">
+      <DependentUpon>showhd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="thongtinnhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="thongtinnhanvien.Designer.cs">
+      <DependentUpon>thongtinnhanvien.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="dangnhap.resx">
+      <DependentUpon>dangnhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="doanhsocanhan.resx">
+      <DependentUpon>doanhsocanhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doanhthutong.resx">
+      <DependentUpon>Doanhthutong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="banhang.resx">
+      <DependentUpon>banhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hoadon.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Hoadon.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="khachhang.resx">
+      <DependentUpon>khachhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kho.resx">
+      <DependentUpon>kho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="khuyenmai.resx">
+      <DependentUpon>khuyenmai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nhapsoluong.resx">
+      <DependentUpon>nhapsoluong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="quanly.resx">
+      <DependentUpon>quanly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="dienmayxanh.resx">
+      <DependentUpon>dienmayxanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="showhd.resx">
+      <DependentUpon>showhd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="thongtinnhanvien.resx">
+      <DependentUpon>thongtinnhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\620.5-login-icon-iconbunny.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\tải xuống.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\Boss_user_man_business_supervisor_female.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\Customer-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\add_friend-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\tải xuống %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\guest-male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\Piggy Bank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\images %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\unnamed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\74074737-lock-icon-vector-illustration-style-is-flat-iconic-symbol-with-gradients-transparent-background-desi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\256-256-cf597a7772ddf0567c59f39012a162b2-lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\unnamed.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\m_checkbutton-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\hide.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\invester-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\tải xuống %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\zingfit-support-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons8-customer-80 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons8-customer-60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons8-user-male-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons8-user-male-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons8-shopping-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons8-box-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons8-login-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\blue-search-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\accounts-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icons8-login-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-new-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-box-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-buy-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-48 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cash-in-hand-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-checkmark-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-checkout-48 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-checkout-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-window-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-conference-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-customer-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-downloading-updates-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-google-web-search-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-handle-with-care-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-home-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-home-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-invoice-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-invoice-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-lock-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-money-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-money-bag-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-new-product-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ok-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ok-hand-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-password-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-password-reset-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pay-wall-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-plus-48 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-plus-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-plus-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-print-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-print-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-product-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-purchase-order-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-purchase-order-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-registration-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-send-to-printer-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-settings-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-settings-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shopping-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sync-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-synchronize-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-thumbs-up-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-trash-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-trash-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-truck-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-groups-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-warehouse-48 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-warehouse-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-warehouse-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\screenshot-59-1506925639941.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-synchronize-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shutdown-48.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

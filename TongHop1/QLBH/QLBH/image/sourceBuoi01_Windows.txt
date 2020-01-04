@@ -1,0 +1,267 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _07_Tuan01_KhauTanDat
+{
+   
+    class Program
+    {
+        static void ThanhTien()
+        {
+            int DG;
+            int SL;
+            Console.Write("nhap don gia:");
+            DG = int.Parse(Console.ReadLine());
+            Console.Write("nhap so luong:");
+            SL = int.Parse(Console.ReadLine());
+            double ThanhTien = DG * SL;
+            if (ThanhTien > 100)
+                ThanhTien = ThanhTien - (ThanhTien * 0.03);
+            Console.Write("tong tien phai tra: {0}", ThanhTien);
+            Console.ReadLine();
+        }
+
+        static double TienDien()
+        {
+            int KW;
+            Console.Write("nhap so kw dien: ");
+            KW = int.Parse(Console.ReadLine());
+            if (KW > 0 && KW < 101)
+            {
+                if (KW > 100)
+                    return ((KW % 100) * 7) + ((KW - KW % 100) * 5);
+                else
+                    return KW * 5;
+            }
+
+            if (KW > 100 && KW < 151)
+            {
+                if (KW > 150)
+                    return ((KW % 150) * 10) + ((KW - KW % 150) * 7);
+                else
+                    return KW * 7;
+            }
+
+            if (KW > 150 && KW < 201)
+            {
+                if (KW > 200)
+                    return ((KW % 100) * 15) + ((KW - KW % 100) * 10);
+                else
+                    return 10 * KW;
+            }
+            if (KW > 200 && KW < 301)
+            {
+                if (KW > 300)
+                    return ((KW % 100) * 20) + ((KW - KW % 100) * 15);
+                else
+                    return 15 * KW;
+            }
+            else
+                return 20 * KW;
+        }
+
+        static void InBangCuuChuongDoc()
+        {
+
+            for (int i = 2; i <= 9; i++)
+            {
+                Console.Write("bang cuu chuong {0}\n", i);
+                for (int j = 1; j <= 10; j++)
+                {
+
+                    Console.Write(" {0} x {1}= {2}\n", i, j, (i * j));
+                }
+            }
+            Console.ReadLine();
+         
+        }
+
+        static void InBangCuuChuongNgang()
+        {
+
+            for (int i = 2; i <= 9; i++)
+            {
+                Console.Write("bang cuu chuong {0}\n", i);
+                for (int j = 1; j <= 10; j++)
+                {
+
+                    Console.Write(" {0} x {1}= {2}\t", i, j, (i * j));
+                }
+            }
+        }
+
+        static void VeChuNhatDac()
+        {
+            Console.Write("nhap chieu dai d:");
+            int d = int.Parse(Console.ReadLine());
+            Console.Write("nhap chieu rong r: ");
+            int r = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= d; i++)
+            {
+                for (int j = 1; j <= r; j++)
+                {
+                    Console.Write("*");
+                  
+                }
+                Console.Write("\n");
+            }
+        }
+        static void VeChuNhatRong()
+        {
+            Console.Write("nhap chieu dai d:");
+            int d = int.Parse(Console.ReadLine());
+            Console.Write("nhap chieu rong r: ");
+            int r = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= d; i++)
+            {
+                for (int j = 1; j <= r; j++)
+                {
+                    if (i == 1 || i == d || j == 1 || j == r)
+                        Console.Write("*");
+                    else
+                        Console.Write(" ");
+                }
+                Console.Write("\n");
+            }
+        }
+        static int TinhS(int n)
+        {
+            
+            int s=0;
+            for (int i = 1; i <= n; i++)
+
+                s += i * i;
+            
+            return s;
+        }
+
+        static int KiemTraSNT(int n)
+        {
+            int dem = 0;
+            for (int i = 1; i <= n; i++)
+            {
+                if (n % i == 0)
+                    dem++;
+            }
+            if(dem==2)
+                return 1;
+            return 0;
+        }
+
+
+
+        static void ShowDaySNT()
+        {
+            int n;
+            do
+            {
+                Console.Write("nhap so:");
+                n = int.Parse(Console.ReadLine());
+            } while (n <=0);
+            for (int i = 1; i <= n; i++)
+            {
+                if (KiemTraSNT(i) == 1)
+                    Console.Write("{0}\t", i);
+
+            }
+                
+                
+
+        }
+
+        static void SumDaySo()
+        {
+            int n;
+            int s = 0;
+            
+            do
+            {
+                Console.Write("nhap so:");
+                n = int.Parse(Console.ReadLine());
+                s += n;
+            } while (n != 0);
+            Console.Write("s= {0}", s);
+        }
+
+        static void MaxDaySo()
+        {
+            int n;
+            int max = 0;
+            do
+            {
+                Console.Write("nhap so:");
+                n = int.Parse(Console.ReadLine());
+                if (n > max)
+                    max = n;
+            } while (n != 0);
+            Console.Write("max= {0}", max);
+        }
+
+        static void MinDaySo()
+        {
+            int n;
+            int min = 0;
+            do
+            {
+                Console.Write("nhap so:");
+                n = int.Parse(Console.ReadLine());
+                if (n < min)
+                    min = n;
+            } while (n != 0);
+            Console.Write("min= {0}", min);
+        }
+
+        static void Main(string[] args)
+        {
+            //Bai 01
+            //ThanhTien(); 
+
+            //Bai 02
+           // Console.Write("tien dien la: {0}", TienDien());
+
+            //Bai 03
+            InBangCuuChuongDoc();
+
+            //Bai 04
+           // InBangCuuChuongNgang();
+
+            //Bai 05
+            //VeChuNhatDac();
+
+            //Bai 06
+           // VeChuNhatRong();
+
+            //Bai 07
+            /*int n;
+            do
+            {
+                Console.Write("nhap n: ");
+                n = int.Parse(Console.ReadLine());
+            } while (n < 0);
+            Console.Write("ket qua la: {0}",TinhS(n));*/
+
+            //Bai 08
+           /* int n;
+            Console.Write("nhap n de kiem tra so nguyen to: ");
+                n = int.Parse(Console.ReadLine());
+                if (KiemTraSNT(n) == 1)
+                    Console.Write("{0} la so nguyen to",n);
+                else
+                    Console.Write("{0} khong la so nguyen to", n);*/
+
+            //Bai 09
+           // ShowDaySNT();
+         
+
+            //Bai 10
+           // SumDaySo();
+           // MaxDaySo();
+            //MinDaySo();
+            
+            Console.ReadLine();
+        }
+    }
+}

@@ -1,0 +1,1 @@
+Liqwid.consStat(1);Liqwid.msg(' '+(++Liqwid.stp),'Step #4 OK');Liqwid.msg(' '+(++Liqwid.stp),'Loc: ','geo');Liqwid.msg(' '+(++Liqwid.stp),'Placements: not selected');
